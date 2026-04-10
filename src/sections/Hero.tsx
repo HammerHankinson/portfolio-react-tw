@@ -2,9 +2,29 @@ import type { SVGProps } from 'react';
 import { Button } from '@/components/Button'
 import {
   ArrowRight,
+  ChevronDown,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from '@/components/AnimatedBorderButton';
+
+const skills = [
+  "Drupal",
+  "PHP",
+  "HTML",
+  "CSS",
+  "SCSS",
+  "JavaScript",
+  "jQuery",
+  "TypeScript",
+  "React",
+  "NextJs",
+  "MySQL",
+  "Git",
+  "GitHub",
+  "CI/CD Integration",
+  "Open Ai Codex",
+  "Anthropic Claude"
+]
 
 
 export const Hero = () => {
@@ -116,8 +136,31 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-
         </div>
+
+        {/* Skills */}
+        <div className='mt-20 animate-fade-in animate-delay-600'>
+          <p className='text-sm text-muted-foreground mb-6 text-center'>Technologies I work with</p>
+          <div className='relative overdflow-hidden'>
+            <div className='flex animate-marquee'>
+              {[...skills, ...skills].map((skill, index) => (
+                <div key={index} className='shrink-0 px-8 py-4'>
+                  <span className='text-xl font-semibod text-muted-foreground/50 hover:text-muted-foreground transition-colors'>{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 z-20'>
+        <a 
+          href='#about'
+          className='flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group'
+        >
+          <span className='text-xs uppercase tracking-wider'>Scroll</span>
+          <ChevronDown className='2-6 h-6 animate-bounce' />
+        </a>
       </div>
     </section>
   )
