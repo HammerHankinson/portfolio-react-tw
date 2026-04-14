@@ -45,6 +45,9 @@
   .font-serif {
     font-family: "Playfair Display", serif;
   }
+  button {
+    cursor: pointer;
+  }
 }
 
 @layer components {
