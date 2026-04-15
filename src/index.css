@@ -115,6 +115,13 @@
   }
 
   .animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(20px);
+    will-change: opacity, transform, filter;
+  }
+
+  .animate-fade-in.is-visible {
     animation: fade-in 0.7s ease-out both;
   }
 

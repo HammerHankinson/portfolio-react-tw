@@ -1,7 +1,7 @@
 export type Project = {
   title: string
   desc: string
-  image: string
+  images: string[]
   tags: string[]
   link: string
   info: string
@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: 'Proofpoint',
     desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
-    image: '',
+    images: [''],
     tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
     link: '#',
     info: '#'
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: 'Denver Health Medical Plan',
     desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
-    image: '',
+    images: [''],
     tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
     link: '#',
     info: '#'
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     title: 'Upwing Energy',
     desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
-    image: '',
+    images: [''],
     tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
     link: '#',
     info: '#'
@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: 'Calnetix Energy',
     desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
-    image: '',
+    images: [''],
     tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
     link: '#',
     info: '#'
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   {
     title: 'Alpha & Omega Semiconductor',
     desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
-    image: '',
+    images: [''],
     tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
     link: '#',
     info: '#'

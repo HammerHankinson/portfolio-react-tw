@@ -29,7 +29,6 @@ export const Experience = () => {
               <div 
                 key={index}
                 className='relative grid md:grid-cols-2 gap-8 animate-fade-in'
-                style={{ animationDelay: `${(index + 1) * 200}ms` }}
               >
                 {/* Dot */}
                 <div className='absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10'>

@@ -36,8 +36,9 @@ export const Hero = () => {
      </div>
 
      <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-      {[...Array(30)].map((_, i) => (
+      {[...Array(30)].map((_, idx) => (
         <div 
+          key={idx}
           className='absolute w-1.5 h-1.5 rounded-full opcacity-60' 
           style={{
             backgroundColor: '#20B2A6',
