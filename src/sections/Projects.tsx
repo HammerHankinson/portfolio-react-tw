@@ -29,7 +29,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 
   return (
     <article
-      className='group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1'
+      className='project-card group panel rounded-2xl overflow-hidden animate-fade-in md:row-span-1'
       style={{ animationDelay: `${(index + 1) * 100}ms` }}
     >
       <div className='relative overflow-hidden aspect-video bg-surface'>
@@ -37,7 +37,9 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           <img
             src={activeImage}
             alt={`${project.title} screenshot ${activeImageIdx + 1}`}
-            className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
+            loading='lazy'
+            decoding='async'
+            className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]'
           />
         ) : (
           <div className='flex h-full w-full items-center justify-center bg-linear-to-br from-surface to-card px-6 text-center'>
@@ -57,7 +59,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                 type='button'
                 aria-label={`Show previous ${project.title} screenshot`}
                 onClick={showPrevious}
-                className='pointer-events-auto rounded-full glass p-3 text-foreground transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-primary/10 hover:text-primary'
+                className='pointer-events-auto rounded-full panel p-3 text-foreground transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-primary/10 hover:text-primary'
               >
                 <ChevronLeft className='h-5 w-5' />
               </button>
@@ -65,7 +67,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                 type='button'
                 aria-label={`Show next ${project.title} screenshot`}
                 onClick={showNext}
-                className='pointer-events-auto rounded-full glass p-3 text-foreground transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-primary/10 hover:text-primary'
+                className='pointer-events-auto rounded-full panel p-3 text-foreground transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-primary/10 hover:text-primary'
               >
                 <ChevronRight className='h-5 w-5' />
               </button>
@@ -103,6 +105,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         <div className='flex flex-wrap gap-3'>
           <a
             href={project.link}
+            target='_blank'
             className='inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary'
           >
             Visit Project
@@ -140,8 +143,8 @@ export const Projects = () => {
   return (
     <section id='projects' className='py-24 relative overflow-hidden'>
       {/* bg glows */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-80 h-80 bg-primary/5 rounded-full blur-2xl" />
+      <div className="absolute bottom-1/4 left-0 w-56 h-56 bg-highlight/5 rounded-full blur-2xl" />
       <div className='container mx-auto px-6 relative z-10'>
         <div className='text-center mx-auto max-w-3xl mb-16'>
           <span className='text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in'>Featured Work</span>

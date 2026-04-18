@@ -57,6 +57,11 @@
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
 
+  .panel {
+    background-color: color-mix(in srgb, var(--color-surface) 92%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+  }
+
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
@@ -79,13 +84,11 @@
     from {
       opacity: 0;
       transform: translateY(20px);
-      filter: blur(20px);
     }
 
     to {
       opacity: 1;
       transform: translateY(0);
-      filter: blur(0)
     }
   }
 
@@ -117,8 +120,7 @@
   .animate-fade-in {
     opacity: 0;
     transform: translateY(20px);
-    filter: blur(20px);
-    will-change: opacity, transform, filter;
+    will-change: opacity, transform;
   }
 
   .animate-fade-in.is-visible {
@@ -176,5 +178,10 @@
   
   .timeline-glow {
     box-shadow: 0 0 40px color-mix(in srgb, var(--color-primary) 35%, transparent), 0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent)
+  }
+
+  .project-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 560px;
   }
 }
