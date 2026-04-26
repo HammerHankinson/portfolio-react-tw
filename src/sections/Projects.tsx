@@ -97,9 +97,9 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           <h3 className='text-xl font-semibold group-hover:text-primary transition-colors'>
             {project.title}
           </h3>
-          <ArrowUpRight
+          {/* <ArrowUpRight
             className='mt-1 h-5 w-5 shrink-0 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all'
-          />
+          /> */}
         </div>
 
         <div className='flex flex-wrap gap-3'>
@@ -120,7 +120,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           </a>
         </div>
 
-        <p className='text-sm text-muted-foreground'>
+        <p className='text-sm text-muted-foreground whitespace-pre-line'>
           {project.desc}
         </p>
 
@@ -162,12 +162,12 @@ export const Projects = () => {
           ))}
         </div>
         {/* View all CTA */}
-        <div className='text-center mt-12 animate-fade-in animation-delay-500'>
+        {/* <div className='text-center mt-12 animate-fade-in animation-delay-500'>
           <AnimatedBorderButton>
             View All Projects
             <ArrowUpRight className='w-5 h-5' />
           </AnimatedBorderButton>
-        </div>
+        </div> */}
       </div>
     </section>
   )

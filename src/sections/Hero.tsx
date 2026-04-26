@@ -10,20 +10,24 @@ import { AnimatedBorderButton } from '@/components/AnimatedBorderButton';
 const skills = [
   "Drupal",
   "PHP",
-  "HTML",
-  "CSS",
+  "HTML5",
+  "CSS3",
   "SCSS",
   "JavaScript",
   "jQuery",
   "TypeScript",
   "React",
   "NextJs",
+  'Tailwind',
   "MySQL",
   "Git",
   "GitHub",
+  "Percy",
   "CI/CD Integration",
   "Open Ai Codex",
-  "Anthropic Claude"
+  "Anthropic Claude",
+  "Wordpress",
+  "Strapi"
 ]
 
 
@@ -57,7 +61,7 @@ export const Hero = () => {
             <div className='animate-fade-in'>
               <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary '>
                 <span className='w-2 h-2 bg-primary rounded-full animate-pulse' />
-                Full Stack Developer * Drupal Specialist
+                Full Stack Developer / Drupal Specialist
               </span>
             </div>
 
@@ -74,9 +78,9 @@ export const Hero = () => {
             </div>
 
             <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-300'>
-              <Button size='lg'>
+              {/* <Button size='lg'>
                 Contact Me <ArrowRight className='w-5 h-5' />
-              </Button>
+              </Button> */}
 
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
@@ -128,7 +132,7 @@ export const Hero = () => {
             <div className='relative max-w-md mx-auto'>
               <div className='absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse' />
               <div className='relative glass rounded-3xl p-2 glow-border'>
-                <img src='/TimTheEnchanter.png' alt='Timmah' className='w-full aspect-4/5 object-cover rounded-2xl' />
+                <img src='/ai_headshot.png' alt='Timmah' className='w-full aspect-4/5 object-cover rounded-2xl' />
 
                 <div className='absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500'>
                   <div className='text-2xl font-bold text-primary'>15+</div>
@@ -154,7 +158,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 z-20'>
+      {/* <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 z-20'>
         <a 
           href='#about'
           className='flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group'
@@ -162,7 +166,7 @@ export const Hero = () => {
           <span className='text-xs uppercase tracking-wider'>Scroll</span>
           <ChevronDown className='2-6 h-6 animate-bounce' />
         </a>
-      </div>
+      </div> */}
     </section>
   )
 }

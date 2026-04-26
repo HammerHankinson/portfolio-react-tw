@@ -9,7 +9,7 @@ export const AnimatedBorderButton = ({
 }: AnimatedBorderButtonProps) => {
   return (
     <button
-      className="relative bg-transparent border border-border 
+      className="relative bg-primary/20 border border-border 
         text-foreground hover:border-primary/50 transition-all 
         duration-1000 focus:outline-none focus-visible:ring-2 
         focus-visible:ring-primary focus-visible:ring-offset-2 
