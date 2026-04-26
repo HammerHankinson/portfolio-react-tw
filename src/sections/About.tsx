@@ -25,8 +25,8 @@ const highlights = [
 
 export const About = () => {
   return (
-    <section id='about' className='py-24 relative overflow-hidden'>
-      <div className='container mx-auto px-6 relative z-10'>
+    <section id='about' className='relative overflow-hidden'>
+      <div className='pt-24 container mx-auto px-6 relative z-10'>
         <div className='grid lg:grid-cols-2 gap-16 items-center'>
           {/* left column */}
           <div className='space-y-8'>
@@ -34,20 +34,20 @@ export const About = () => {
               <span className='text-secondary-foreground text-sm font-medium tracking-wider uppercase'>About Me</span>
             </div>
         
-            <h2 className='text-4xl md:text-5xl font-bold leading-tight animated-fade-in animation-delay text-secondary-foreground'>
+            <h2 className='text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground'>
               Building the future,
               <span className='font-serif italic font-normal text-white'> one component at a time.</span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                I got my start in web development in the early 2000s, teaching myself how to build websites for my bands. What began as a creative outlet quickly turned into a long-term career. One built on curiosity, problem-solving, and a genuine interest in how people interact with the web. 
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                Since I started working for professional agencies over 15 years ago, I've worked across the full stack to build, maintain, and improve well over 100 websites and applications. Much of my experience is in Drupal, but my work extends beyond any single technology. Spanning PHP, modern frontend frameworks like Next.js, and everything in between. I'm especially drawn to the challenge of improving performance, fixing complex issues, and making things more stable and easier to use. 
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                I care about building websites that hold up over time—for both the people using them and the teams maintaining them. That means focusing on performance, accessibility, and clean, intuitive content editing experiences. Whether I'm developing new features or troubleshooting a tricky bug, my goal is always the same: leave the system better than I found it.
               </p>
             </div>
 

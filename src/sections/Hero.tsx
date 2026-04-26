@@ -1,11 +1,10 @@
 import type { SVGProps } from 'react';
-import { Button } from '@/components/Button'
 import {
   ArrowRight,
-  ChevronDown,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from '@/components/AnimatedBorderButton';
+import { Button } from '@/components/Button';
 
 const skills = [
   "Drupal",
@@ -22,6 +21,9 @@ const skills = [
   "MySQL",
   "Git",
   "GitHub",
+  'Drush',
+  'Docker',
+  'Composer',
   "Percy",
   "CI/CD Integration",
   "Open Ai Codex",
@@ -35,7 +37,7 @@ export const Hero = () => {
   return (
     <section className='relative min-h-screen flex item-center overflow-hidden'>
      <div className='absolute inset-0'>
-      <img src='/hero-bg.jpg' alt='hero image' className='w-full h-full object-cover opacity-40' />
+      <img src='/hero-bg-2.png' alt='hero image' className='w-full h-full object-cover opacity-70' />
         <div className='absolute inset-0 bg-linear-to-b from-background/20 via-background/80 to-background'></div>
      </div>
 
@@ -45,7 +47,7 @@ export const Hero = () => {
           key={idx}
           className='absolute w-1.5 h-1.5 rounded-full opcacity-60' 
           style={{
-            backgroundColor: '#20B2A6',
+            backgroundColor: 'var(--color-primary)',
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
             animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
@@ -55,11 +57,11 @@ export const Hero = () => {
       ))}
      </div>
     
-      <div className='container mx-auto px-6 pt-32 pb-20 relateve z-10'>
+      <div className='container mx-auto px-6 pt-32 pb-16 relateve z-10'>
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
           <div className='space-y-8'>
             <div className='animate-fade-in'>
-              <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary '>
+              <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass bg-primary/10 text-sm text-primary '>
                 <span className='w-2 h-2 bg-primary rounded-full animate-pulse' />
                 Full Stack Developer / Drupal Specialist
               </span>
@@ -74,17 +76,21 @@ export const Hero = () => {
                 <span className='font-serif italic font-normal text-white'>precision.</span>
               </h1>
 
-              <p className='text-lg text-muted-foreground mx-w-lg animate-fade-in animation-delay-200'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+              <p className='text-lg text-muted-foreground mx-w-lg animate-fade-in animation-delay-200'>Full-stack developer with 15+ years of professional industry experience building and maintaining complex web applications, with a focus on performance, accessibility, and long-term stability across both backend systems like Drupal and modern frontend frameworks like NextJs.</p>
             </div>
 
             <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-300'>
-              {/* <Button size='lg'>
-                Contact Me <ArrowRight className='w-5 h-5' />
-              </Button> */}
+              <Button 
+                size='lg'
+                className='bg-primary/70'
+                onClick={() => {document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });}}
+              >
+                My Work <ArrowRight className='w-5 h-5' />
+              </Button>
 
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
-                Download CV
+                Resume
               </AnimatedBorderButton>
             </div>
 
@@ -132,11 +138,11 @@ export const Hero = () => {
             <div className='relative max-w-md mx-auto'>
               <div className='absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse' />
               <div className='relative glass rounded-3xl p-2 glow-border'>
-                <img src='/ai_headshot.png' alt='Timmah' className='w-full aspect-4/5 object-cover rounded-2xl' />
+                <img src='/ai_headshot.png' alt='Timmah' className='w-full aspect-4/5 object-cover rounded-2xl opacity-90' />
 
                 <div className='absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500'>
                   <div className='text-2xl font-bold text-primary'>15+</div>
-                  <div className='text-xs text-muted-foreground'>Years Exp.</div>
+                  <div className='text-xs text-muted-foreground'>Years <br />Professional<br/>Experience</div>
                 </div>
               </div>
             </div>

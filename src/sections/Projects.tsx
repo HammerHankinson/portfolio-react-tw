@@ -1,4 +1,3 @@
-import { AnimatedBorderButton } from '@/components/AnimatedBorderButton'
 import type { Project } from '@/content/projects'
 import { projects } from '@/content/projects'
 import { ArrowUpRight, ChevronLeft, ChevronRight, Info } from 'lucide-react'
