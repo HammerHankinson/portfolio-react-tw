@@ -96,27 +96,27 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           <h3 className='text-xl font-semibold group-hover:text-primary transition-colors'>
             {project.title}
           </h3>
-          {/* <ArrowUpRight
-            className='mt-1 h-5 w-5 shrink-0 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all'
-          /> */}
         </div>
 
         <div className='flex flex-wrap gap-3'>
-          <a
-            href={project.link}
-            target='_blank'
-            className='inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary'
-          >
-            Visit Project
-            <ArrowUpRight className='h-4 w-4' />
-          </a>
-          <a
+          {!!project.link && (
+            <a
+              href={project.link}
+              target='_blank'
+              className='inline-flex items-center gap-2 rounded-full bg-primary/40 px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:bg-primary'
+            >
+              Visit Project
+              <ArrowUpRight className='h-4 w-4' />
+            </a>
+          )}
+          
+          {/* <a
             href={project.info}
             className='inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary'
           >
             More Info
             <Info className='h-4 w-4' />
-          </a>
+          </a> */}
         </div>
 
         <p className='text-sm text-muted-foreground whitespace-pre-line'>
@@ -151,7 +151,7 @@ export const Projects = () => {
             Projects that
             <span className='font-serif italic font-normal text-white'> make an impact.</span>
           </h2>
-          <p className='text-muted-foreground animate-fade-in animation-delay-200'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+          <p className='text-muted-foreground animate-fade-in animation-delay-200'>A small handfull of projects I've helped build and maintain across high-traffic platforms, complex content systems, and modern web architectures.</p>
         </div>
 
         {/* projects grid */}

@@ -60,7 +60,7 @@ export const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMobileMenuOpen && ( 
-        <div className='md:hidden glass-strong animate-fade-in'>
+        <div className='md:hidden glass-strong animate-fade-in is-visible'>
           <div className='container mx-auto px-6 py-6 flex flex-col gap-4'>
             {navLinks.map((link, index) => (
               <a 
@@ -73,7 +73,7 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button size='sm' onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
+            {/* <Button size='sm' onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button> */}
           </div>
         </div>
       )}

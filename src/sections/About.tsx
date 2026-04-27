@@ -44,7 +44,7 @@ export const About = () => {
                 I got my start in web development in the early 2000s, teaching myself how to build websites for my bands. What began as a creative outlet quickly turned into a long-term career. One built on curiosity, problem-solving, and a genuine interest in how people interact with the web. 
               </p>
               <p>
-                Since I started working for professional agencies over 15 years ago, I've worked across the full stack to build, maintain, and improve well over 100 websites and applications. Much of my experience is in Drupal, but my work extends beyond any single technology. Spanning PHP, modern frontend frameworks like Next.js, and everything in between. I'm especially drawn to the challenge of improving performance, fixing complex issues, and making things more stable and easier to use. 
+                Since I started working for professional agencies over 15 years ago, I've worked across the full stack to build, maintain, and improve a wide range of1 websites and applications. Much of my experience is in Drupal, but my work extends beyond any single technology. Spanning PHP, modern frontend frameworks like Next.js, and everything in between. I'm especially drawn to the challenge of improving performance, fixing complex issues, and making things more stable and easier to use. 
               </p>
               <p>
                 I care about building websites that hold up over time—for both the people using them and the teams maintaining them. That means focusing on performance, accessibility, and clean, intuitive content editing experiences. Whether I'm developing new features or troubleshooting a tricky bug, my goal is always the same: leave the system better than I found it.
@@ -53,9 +53,7 @@ export const About = () => {
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "I focus on building digital experiences that are not only functional, but reliable, maintainable, and genuinely enjoyable to use, both for users and the teams behind them."
               </p>
             </div>
           </div>

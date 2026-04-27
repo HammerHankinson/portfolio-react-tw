@@ -3,7 +3,7 @@ export type Project = {
   desc: string
   images: string[]
   tags: string[]
-  link: string
+  link: string | null
   info: string
 }
 
@@ -50,18 +50,26 @@ export const projects: Project[] = [
   },
   {
     title: 'SiTime',
-    desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
+    desc: 'Drupal-based product and commerce platform for SiTime, a semiconductor company specializing in precision timing solutions. I worked across a heavily customized Drupal 8->10 codebase, including custom content types, paragraph based page building, taxonomy structures, product data models, and a bespoke frontend theme. Key work included supporting a product/part finder, gated resource downloads, Algolia-powered search, newsroom/resource imports, and editor-friendly content management tools. The result was a flexible marketing and product platform that connected technical product data, commerce workflows, and content publishing into a unified Drupal experience',
     images: ['/projects/sitime-homepage.png'],
+    tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
+    link: 'https://www.sitime.com/',
+    info: '#'
+  },
+  {
+    title: 'Cupertino Electric',
+    desc: 'A decoupled web application built with Drupal as a headless CMS and a custom Next.js/Express frontend, designed to deliver a fast, scalable marketing experience powered by structured content. The Drupal backend includes a custom decoupling layer that transforms content into clean, cacheable JSON, handling routing, redirects, access control, multilingual support, and normalization of complex entities such as media, paragraphs, and taxonomy. On the frontend, a server-rendered React architecture consumes this data to dynamically generate pages through reusable components, supporting rich features like animated transitions, media-heavy layouts, project listings with mapping integrations, advanced search/filtering, and seamless webform handling. Together, the system balances a flexible editorial experience with a performant, modern frontend, enabling efficient content management and a polished user experience.',
+    images: ['/projects/cei-homepage.png'],
     tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
     link: '#',
     info: '#'
   },
   {
-    title: 'Cupertino Electric',
-    desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
-    images: ['/projects/cei-homepage.png'],
-    tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
-    link: '#',
+    title: 'This Portfolio',
+    desc: 'A straightforward single-page portfolio application built with React and Tailwind CSS. I kept the stack intentionally lightweight instead of reaching for a heavier CMS like Drupal, since the project only needed a fast, focused frontend experience. The goal was to showcase selected work while sharpening my React, component architecture, responsive layout, and utility-first styling skills in a clean production-ready application.',
+    images: ['/projects/portfolio-screenshot.png'],
+    tags: ['React', 'Tailwind CSS'],
+    link: null,
     info: '#'
   },
 ]

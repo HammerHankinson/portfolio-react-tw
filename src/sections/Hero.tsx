@@ -16,7 +16,7 @@ const skills = [
   "jQuery",
   "TypeScript",
   "React",
-  "NextJs",
+  "Next.Js",
   'Tailwind',
   "MySQL",
   "Git",
@@ -69,11 +69,10 @@ export const Hero = () => {
 
             <div className='space-y-4'>
               <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100'>
-                Crafting <span className='text-primary glow-text'>digital</span>
+                Building and maintaining<br/> 
+                <span className='text-primary glow-text'>fast, reliable</span>
                 <br />
-                experiences with
-                <br />
-                <span className='font-serif italic font-normal text-white'>precision.</span>
+                web <span className='font-serif italic font-normal text-white'>experiences.</span>
               </h1>
 
               <p className='text-lg text-muted-foreground mx-w-lg animate-fade-in animation-delay-200'>Full-stack developer with 15+ years of professional industry experience building and maintaining complex web applications, with a focus on performance, accessibility, and long-term stability across both backend systems like Drupal and modern frontend frameworks like NextJs.</p>
