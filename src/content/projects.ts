@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: 'Proofpoint',
     desc: 'A large enterprise Drupal web application for Proofpoint, rebuilt from the ground up after being inherited on Drupal 7 and maintained through successive upgrades from Drupal 8 to Drupal 11. I worked as part of a small engineering team responsible for rebuilding in Drupal 8, multiple redesins, ongoing feature development, maintenance, and platform modernization.\n\nThe application used Pattern Lab and extensive Twig-based component theming to support a large-scale multilingual marketing and content platform. It also included 40+ custom Drupal modules ranging from simple editorial tools and custom blocks to third-party integrations, multilingual and SEO functionality, custom entities, complex content workflows, migration tooling, search enhancements, and CDN/cache management.\n\nThe project also used CircleCI for CI/CD and Percy for visual regression testing. It remains one of the most complex software engineering projects I have worked on, combining frontend architecture, Drupal backend development, content modeling, integrations, testing, deployment automation, and long-term platform maintenance.',
-    images: ['/projects/pfpt-homepage.png', '/projects/pfpt/pfpt-nav.png', '/projects/pfpt/pfpt-resource-library.png'],
+    images: ['/projects/pfpt-homepage.png'],
     fullPageImages: [
       '/projects/pfpt/pfpt-customer-stories.png',
       '/projects/pfpt/pfpt-homepage-full.png',
