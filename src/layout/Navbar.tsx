@@ -31,7 +31,7 @@ export const Navbar = () => {
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a href='#' className='text-xl font-bold tracking-tight hover:text-primary'>
           {/* TH<span className="text-primary">.</span> */}
-          <img src='/logo.png' alt='Timmah' className='max-w-[400px]' />
+          <img src='/logo.png' alt='Timmah' className='max-w-[400px] w-full' />
         </a>
 
         {/* Desktop */}
