@@ -16,7 +16,7 @@ export const Experience = () => {
             Experience that
             <span className='font-serif italic font-normal text-white'> speaks volumes</span>
           </h2>
-          <p className='text-muted-foreground animate-fade-in animation-delay-200'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+          <p className='text-muted-foreground animate-fade-in animation-delay-200'>A long running mix of frontend, backend, and CMS work, shaped by performance, maintainability, and clear communication.</p>
         </div>
 
         {/* timeline */}

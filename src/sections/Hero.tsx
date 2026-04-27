@@ -137,7 +137,7 @@ export const Hero = () => {
             <div className='relative max-w-md mx-auto'>
               <div className='absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse' />
               <div className='relative glass rounded-3xl p-2 glow-border'>
-                <img src='/ai_headshot.png' alt='Timmah' className='w-full aspect-4/5 object-cover rounded-2xl opacity-90' />
+                <img src='/ai_headshot.png' alt='Tim' className='w-full aspect-4/5 object-cover rounded-2xl opacity-90' />
 
                 <div className='absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500'>
                   <div className='text-2xl font-bold text-primary'>15+</div>
