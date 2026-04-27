@@ -1,9 +1,18 @@
 import type { Project } from '@/content/projects'
 import { projects } from '@/content/projects'
-import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ProjectDialog } from '@/components/ProjectDialog'
+import { ArrowUpRight, ChevronLeft, ChevronRight, Info } from 'lucide-react'
 import { useState } from 'react'
 
-const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
+const ProjectCard = ({
+  project,
+  index,
+  onMoreInfo,
+}: {
+  project: Project
+  index: number
+  onMoreInfo: (project: Project) => void
+}) => {
   const [activeImageIdx, setActiveImageIdx] = useState(0)
   const images = project.images.filter(Boolean)
   const imageCount = images.length
@@ -110,13 +119,17 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             </a>
           )}
           
-          {/* <a
-            href={project.info}
-            className='inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary'
-          >
-            More Info
-            <Info className='h-4 w-4' />
-          </a> */}
+          {!!project.fullPageImage && (
+            <button
+              type='button'
+              onClick={() => onMoreInfo(project)}
+              aria-label={`Open ${project.title} full-page screenshot`}
+              className='inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary'
+            >
+              More Info
+              <Info className='h-4 w-4' />
+            </button>
+          )}
         </div>
 
         <p className='text-sm text-muted-foreground whitespace-pre-line'>
@@ -139,6 +152,8 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 }
 
 export const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+
   return (
     <section id='projects' className='py-24 relative overflow-hidden'>
       {/* bg glows */}
@@ -157,7 +172,12 @@ export const Projects = () => {
         {/* projects grid */}
         <div className='grid md:grid-cols-2 gap-8'>
           {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={index}
+              onMoreInfo={setSelectedProject}
+            />
           ))}
         </div>
         {/* View all CTA */}
@@ -168,6 +188,7 @@ export const Projects = () => {
           </AnimatedBorderButton>
         </div> */}
       </div>
+      <ProjectDialog project={selectedProject} onClose={() => setSelectedProject(null)} />
     </section>
   )
 }

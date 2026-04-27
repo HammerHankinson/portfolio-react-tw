@@ -62,6 +62,11 @@
     border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
   }
 
+  .project-dialog::backdrop {
+    background-color: color-mix(in srgb, var(--color-background) 74%, transparent);
+    backdrop-filter: blur(8px);
+  }
+
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
