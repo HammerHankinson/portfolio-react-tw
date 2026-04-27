@@ -1,6 +1,6 @@
 import type { Project } from '@/content/projects'
 import { projects } from '@/content/projects'
-import { ArrowUpRight, ChevronLeft, ChevronRight, Info } from 'lucide-react'
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
