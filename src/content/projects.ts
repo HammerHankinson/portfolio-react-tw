@@ -45,7 +45,7 @@ export const projects: Project[] = [
     desc: 'A decoupled web application using Drupal as a headless CMS and Next.js for the frontend, all managed within a single Git repository, using GitHub Actions for CI/CD, and hosted on Upsun (Platform.sh). I contributed across both backend and frontend, including Drupal content modeling, core/module updates, and development of reusable Next.js components. Led development of many key site sections such as the newsroom, while also supporting complex features like a custom product catalog with parametric search. Focused on improving content editor experience and maintaining a scalable architecture capable of handling large, structured product data. Resulted in a high-performance application with fast load times and flexible content management.',
     images: ['/projects/aos-homepage.png'],
     tags: ['Drupal', 'PHP', 'NextJs', 'SCSS', 'Algolia', 'Git', 'Github Actions', 'Platform.sh'],
-    link: '#',
+    link: 'https://www.aosmd.com',
     info: '#'
   },
   {
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     desc: 'A decoupled web application built with Drupal as a headless CMS and a custom Next.js/Express frontend, designed to deliver a fast, scalable marketing experience powered by structured content. The Drupal backend includes a custom decoupling layer that transforms content into clean, cacheable JSON, handling routing, redirects, access control, multilingual support, and normalization of complex entities such as media, paragraphs, and taxonomy. On the frontend, a server-rendered React architecture consumes this data to dynamically generate pages through reusable components, supporting rich features like animated transitions, media-heavy layouts, project listings with mapping integrations, advanced search/filtering, and seamless webform handling. Together, the system balances a flexible editorial experience with a performant, modern frontend, enabling efficient content management and a polished user experience.',
     images: ['/projects/cei-homepage.png'],
     tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
-    link: '#',
+    link: 'https://www.cei.com',
     info: '#'
   },
   {

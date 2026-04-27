@@ -9,17 +9,17 @@ const highlights = [
   {
     icon: Rocket,
     title: "Performance",
-    desc: "Writing maintainable, scalable code that stands the test of time.",
+    desc: "Optimizing sites and applications so they feel fast, stable, and responsive.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    desc: "Writing maintainable, scalable code that stands the test of time.",
+    desc: "Working closely with teams to turn complex goals into clear, practical solutions.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
-    desc: "Staying ahead with the latest technologies and best practices.",
+    desc: "Exploring better tools and workflows while keeping real project needs in focus.",
   },
 ]
 
@@ -41,13 +41,13 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I got my start in web development in the early 2000s, teaching myself how to build websites for my bands. What began as a creative outlet quickly turned into a long-term career. One built on curiosity, problem-solving, and a genuine interest in how people interact with the web. 
+                I got my start in web development in the early 2000s, teaching myself how to build websites for my bands. What began as a creative outlet quickly turned into a long-term career. One built on curiosity, problem solving, and a genuine interest in how people interact with the web. 
               </p>
               <p>
                 Since I started working for professional agencies over 15 years ago, I've worked across the full stack to build, maintain, and improve a wide range of1 websites and applications. Much of my experience is in Drupal, but my work extends beyond any single technology. Spanning PHP, modern frontend frameworks like Next.js, and everything in between. I'm especially drawn to the challenge of improving performance, fixing complex issues, and making things more stable and easier to use. 
               </p>
               <p>
-                I care about building websites that hold up over time—for both the people using them and the teams maintaining them. That means focusing on performance, accessibility, and clean, intuitive content editing experiences. Whether I'm developing new features or troubleshooting a tricky bug, my goal is always the same: leave the system better than I found it.
+                I care about building websites that hold up over time, for both the people using them and the teams maintaining them. That means focusing on performance, accessibility, and clean, intuitive content editing experiences. Whether I'm developing new features or troubleshooting a tricky bug, my goal is always the same: leave the system better than I found it.
               </p>
             </div>
 
