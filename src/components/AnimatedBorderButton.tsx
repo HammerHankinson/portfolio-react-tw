@@ -1,22 +1,34 @@
-import type { ReactNode } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
-type AnimatedBorderButtonProps = {
+type BaseAnimatedBorderButtonProps = {
   children: ReactNode;
 };
 
-export const AnimatedBorderButton = ({
-  children,
-}: AnimatedBorderButtonProps) => {
-  return (
-    <button
-      className="relative bg-primary/20 border border-border 
+type AnimatedBorderButtonAnchorProps = BaseAnimatedBorderButtonProps &
+  AnchorHTMLAttributes<HTMLAnchorElement> & { href: string };
+
+type AnimatedBorderButtonButtonProps = BaseAnimatedBorderButtonProps &
+  ButtonHTMLAttributes<HTMLButtonElement> & { href?: undefined };
+
+type AnimatedBorderButtonProps =
+  | AnimatedBorderButtonButtonProps
+  | AnimatedBorderButtonAnchorProps;
+
+const isAnchorButton = (
+  props: AnimatedBorderButtonProps,
+): props is AnimatedBorderButtonAnchorProps => typeof props.href === "string";
+
+export const AnimatedBorderButton = (props: AnimatedBorderButtonProps) => {
+  const getClassName = (className = "") => `relative bg-primary/20 border border-border 
         text-foreground hover:border-primary/50 transition-all 
         duration-1000 focus:outline-none focus-visible:ring-2 
         focus-visible:ring-primary focus-visible:ring-offset-2 
         disabled:opacity-50 disabled:cursor-not-allowed group 
         px-8 py-4 text-lg font-medium rounded-full overflow-visible 
-        animated-border"
-    >
+        animated-border ${className}`;
+
+  const content = (
+    <>
       {/* Animated SVG Border */}
       <svg
         className="absolute left-0 top-0 w-full h-full pointer-events-none download-cv-border"
@@ -37,8 +49,29 @@ export const AnimatedBorderButton = ({
         />
       </svg>
       <span className="relative z-10 flex items-center justify-center gap-2">
-        {children}
+        {props.children}
       </span>
+    </>
+  );
+
+  if (isAnchorButton(props)) {
+    const { children: _children, className, ...anchorProps } = props;
+
+    return (
+      <a className={getClassName(className)} {...anchorProps}>
+        {content}
+      </a>
+    );
+  }
+
+  const { children: _children, className, ...buttonProps } = props;
+
+  return (
+    <button
+      className={getClassName(className)}
+      {...buttonProps}
+    >
+      {content}
     </button>
   );
 };
