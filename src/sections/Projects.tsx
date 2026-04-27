@@ -119,7 +119,7 @@ const ProjectCard = ({
             </a>
           )}
           
-          {!!project.fullPageImage && (
+          {!!project.fullPageImages.length && (
             <button
               type='button'
               onClick={() => onMoreInfo(project)}
@@ -137,9 +137,9 @@ const ProjectCard = ({
         </p>
 
         <div className='flex flex-wrap gap-2'>
-          {project.tags.map((tag) => (
+          {project.tags.map((tag, tagIndex) => (
             <span
-              key={`${project.title}-${tag}`}
+              key={`${project.title}-${tag}-${tagIndex}`}
               className='px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300'
             >
               {tag}
@@ -188,7 +188,11 @@ export const Projects = () => {
           </AnimatedBorderButton>
         </div> */}
       </div>
-      <ProjectDialog project={selectedProject} onClose={() => setSelectedProject(null)} />
+      <ProjectDialog
+        key={selectedProject?.title ?? 'project-dialog'}
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   )
 }
