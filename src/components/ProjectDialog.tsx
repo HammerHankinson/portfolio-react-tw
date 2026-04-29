@@ -3,16 +3,15 @@ import { ChevronDown, ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 type ProjectDialogProps = {
-  project: Project | null
-  onClose: () => void
+  id: string
+  project: Project
 }
 
-export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
+export const ProjectDialog = ({ id, project }: ProjectDialogProps) => {
   const dialogRef = useRef<HTMLDialogElement>(null)
   const screenshotRef = useRef<HTMLDivElement>(null)
   const [activeImageIdx, setActiveImageIdx] = useState(0)
-  const isOpen = Boolean(project)
-  const fullPageImages = project?.fullPageImages.filter(Boolean) ?? []
+  const fullPageImages = project.fullPageImages.filter(Boolean)
   const imageCount = fullPageImages.length
   const hasCarousel = imageCount > 1
   const activeImage = imageCount ? fullPageImages[activeImageIdx] : null
@@ -34,62 +33,36 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
   }
 
   useEffect(() => {
-    const dialog = dialogRef.current
-
-    if (!dialog) {
-      return
-    }
-
-    if (isOpen && !dialog.open) {
-      dialog.showModal()
-      return
-    }
-
-    if (!isOpen && dialog.open) {
-      dialog.close()
-    }
-  }, [isOpen])
-
-  useEffect(() => {
     screenshotRef.current?.scrollTo({ top: 0 })
-  }, [activeImageIdx, project?.title])
-
-  useEffect(() => {
-    if (!isOpen) {
-      return
-    }
-
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-
-    return () => {
-      document.body.style.overflow = previousOverflow
-    }
-  }, [isOpen])
+  }, [activeImageIdx, project.title])
 
   return (
     <dialog
+      id={id}
       ref={dialogRef}
-      aria-labelledby={project ? 'project-dialog-title' : undefined}
+      aria-labelledby={`${id}-title`}
+      closedby='closerequest'
       className='project-dialog glass-strong m-auto w-[calc(100%-2rem)] max-w-5xl rounded-2xl p-0 text-foreground shadow-2xl shadow-background/70'
-      onCancel={onClose}
-      onClose={onClose}
+      onClose={() => {
+        setActiveImageIdx(0)
+      }}
       onClick={(event) => {
         if (event.target === dialogRef.current) {
-          onClose()
+          dialogRef.current.close()
         }
       }}
     >
-      {project && activeImage && (
+      {activeImage && (
         <div className='max-h-[calc(100dvh-2rem)] overflow-hidden p-4 sm:p-5'>
           <div className='mb-4 flex items-center justify-between gap-4'>
-            <h3 id='project-dialog-title' className='text-lg font-semibold text-secondary-foreground sm:text-xl'>
+            <h3 id={`${id}-title`} className='text-lg font-semibold text-secondary-foreground sm:text-xl'>
               {project.title}
             </h3>
             <button
               type='button'
+              command='close'
+              commandfor={id}
               aria-label={`Close ${project.title} screenshot`}
-              onClick={onClose}
               className='shrink-0 rounded-full border border-border/70 bg-surface p-2 text-foreground transition-all duration-300 hover:border-primary/60 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary'
             >
               <X className='h-5 w-5' />

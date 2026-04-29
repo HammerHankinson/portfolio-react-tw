@@ -2,17 +2,16 @@ import type { Project } from '@/content/projects'
 import { projects } from '@/content/projects'
 import { ProjectDialog } from '@/components/ProjectDialog'
 import { ArrowUpRight, ChevronLeft, ChevronRight, Info } from 'lucide-react'
-import { useState } from 'react'
+import { useId, useState } from 'react'
 
 const ProjectCard = ({
   project,
   index,
-  onMoreInfo,
 }: {
   project: Project
   index: number
-  onMoreInfo: (project: Project) => void
 }) => {
+  const dialogId = useId()
   const [activeImageIdx, setActiveImageIdx] = useState(0)
   const images = project.images.filter(Boolean)
   const imageCount = images.length
@@ -122,7 +121,8 @@ const ProjectCard = ({
           {!!project.fullPageImages.length && (
             <button
               type='button'
-              onClick={() => onMoreInfo(project)}
+              command='show-modal'
+              commandfor={dialogId}
               aria-label={`Open ${project.title} full-page screenshot`}
               className='inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary'
             >
@@ -147,13 +147,15 @@ const ProjectCard = ({
           ))}
         </div>
       </div>
+
+      {!!project.fullPageImages.length && (
+        <ProjectDialog id={dialogId} project={project} />
+      )}
     </article>
   )
 }
 
 export const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-
   return (
     <section id='projects' className='py-24 relative overflow-hidden'>
       {/* bg glows */}
@@ -176,7 +178,6 @@ export const Projects = () => {
               key={project.title}
               project={project}
               index={index}
-              onMoreInfo={setSelectedProject}
             />
           ))}
         </div>
@@ -188,11 +189,6 @@ export const Projects = () => {
           </AnimatedBorderButton>
         </div> */}
       </div>
-      <ProjectDialog
-        key={selectedProject?.title ?? 'project-dialog'}
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </section>
   )
 }

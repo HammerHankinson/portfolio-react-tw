@@ -67,6 +67,11 @@
     backdrop-filter: blur(8px);
   }
 
+  html:has(.project-dialog:modal),
+  body:has(.project-dialog:modal) {
+    overflow: hidden;
+  }
+
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
