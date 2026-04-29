@@ -33,7 +33,7 @@ export const projects: Project[] = [
       '/projects/dhmp/dhmp-interior-page.png',
       '/projects/dhmp/dhmp-resource-library.png',
     ],
-    tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia', 'SCSS', 'Gulp', 'Git', 'GitHub Actions', 'DDEV', 'Figma', 'D8 -> D11', 'Acquia', 'Composer', 'Drush', 'CI/CD', 'Custom Theming', 'WCAG 2.1', 'CMS', 'Component-based Design'],
+    tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia', 'SCSS', 'Gulp', 'Git', 'GitHub Actions', 'DDEV', 'Figma', 'D8 -> D11', 'Acquia', 'Composer', 'Drush', 'CI/CD', 'Custom Theming', 'WCAG 2.1'],
     link: 'https://www.denverhealthmedicalplan.org/',
   },
   {
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       '/projects/sitime/sitime-product-detail.png',
       '/projects/sitime/sitime=products-overview.png',
     ],
-    tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
+    tags: ['Drupal', 'PHP', 'SCSS', 'Git', 'Github Actions', 'Platform.sh', 'DDEV', 'Figma', 'D8 -> D11', 'Composer', 'Drush', 'CMS'],
     link: 'https://www.sitime.com/',
   },
   {
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     desc: 'A decoupled web application built with Drupal as a headless CMS and a custom Next.js/Express frontend, designed to deliver a fast, scalable marketing experience powered by structured content. The Drupal backend includes a custom decoupling layer that transforms content into clean, cacheable JSON, handling routing, redirects, access control, multilingual support, and normalization of complex entities such as media, paragraphs, and taxonomy. On the frontend, a server-rendered React architecture consumes this data to dynamically generate pages through reusable components, supporting rich features like animated transitions, media-heavy layouts, project listings with mapping integrations, advanced search/filtering, and seamless webform handling. Together, the system balances a flexible editorial experience with a performant, modern frontend, enabling efficient content management and a polished user experience.',
     images: ['/projects/cei-homepage.png'],
     fullPageImages: [],
-    tags: ['Drupal', 'PHP', 'Twig', 'JavaScript', 'Algolia'],
+    tags: ['Drupal', 'PHP', 'NextJs', 'SCSS', 'Git', 'Acquia', 'Heroku', 'DDEV', 'Figma', 'D8 -> D11', 'Composer', 'Drush', 'CMS'],
     link: 'https://www.cei.com',
   },
   {
