@@ -28,6 +28,9 @@ export const Navbar = () => {
   }, []);
   return (
     <header className={`fixed top-0 left-0 right-0 border-none transition-all duration-500 ${isScrolled ? 'glass-strong py-3' : 'bg-transparent py-5'} z-50`}>
+
+      <div id='progress-bar' className='top-0 absolute h-full w-full bg-highlight opacity-10' />
+
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a href='#' className='text-xl font-bold tracking-tight hover:text-primary'>
           {/* TH<span className="text-primary">.</span> */}

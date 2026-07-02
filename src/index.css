@@ -194,4 +194,19 @@
     content-visibility: auto;
     contain-intrinsic-size: 560px;
   }
+
+    @keyframes grow-progress {
+    from {
+      transform: scalex(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  #progress-bar {
+    transform-origin: 0 50%;
+    animation: grow-progress linear forwards;
+    animation-timeline: scroll();
+  }
 }
