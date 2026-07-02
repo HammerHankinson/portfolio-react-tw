@@ -195,7 +195,7 @@
     contain-intrinsic-size: 560px;
   }
 
-    @keyframes grow-progress {
+  @keyframes grow-progress {
     from {
       transform: scalex(0);
     }
@@ -205,8 +205,16 @@
   }
 
   #progress-bar {
-    transform-origin: 0 50%;
-    animation: grow-progress linear forwards;
-    animation-timeline: scroll();
+    display: none;
+  }
+
+  /* Show progress bar in all  */
+  @supports (animation-timeline: scroll()) {
+    #progress-bar {
+      display: block;
+      transform-origin: 0 50%;
+      animation: grow-progress linear forwards;
+      animation-timeline: scroll();
+    }
   }
 }
